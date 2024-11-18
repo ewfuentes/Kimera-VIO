@@ -52,7 +52,7 @@ double NsecToSec(const Timestamp& timestamp) {
 }
 
 // (NOT TESTED) Converts time from seconds to nanoseconds
-std::int64_t SecToNsec(const double timeInSec) {
+int64_t SecToNsec(const double timeInSec) {
   return double(timeInSec * 1e9);
 }
 
