@@ -63,7 +63,7 @@ class NoOpticalFlowPredictor : public OpticalFlowPredictor {
   bool predictSparseFlow(const KeypointsCV& prev_kps,
                          const gtsam::Rot3& /* inter_frame */,
                          KeypointsCV* next_kps) override;
-  cv::Mat predictDenseFlow(const gtsam::Rot3& cam1_R_cam2) { return cv::Mat(); }
+  cv::Mat predictDenseFlow(const gtsam::Rot3& cam1_R_cam2) override { return cv::Mat(); }
 };
 
 /**
