@@ -51,7 +51,7 @@ class VioNavState {
   gtsam::imuBias::ConstantBias imu_bias_;
 
   virtual void print(const std::string& message = " ") const;
-  virtual bool equals(const VioNavState& rhs) const;
+  bool equals(const VioNavState& rhs) const;
 };
 
 class VioNavStateTimestamped : public VioNavState {
@@ -71,7 +71,7 @@ class VioNavStateTimestamped : public VioNavState {
   Timestamp timestamp_;
 
   virtual void print(const std::string& message = " ") const override;
-  virtual bool equals(const VioNavStateTimestamped& rhs) const;
+  bool equals(const VioNavStateTimestamped& rhs) const;
 };
 
 }  // namespace VIO

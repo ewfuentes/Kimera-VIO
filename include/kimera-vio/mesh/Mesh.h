@@ -366,7 +366,7 @@ inline Mesh3D::VertexType convertVertex2dTo3d(const Mesh2D::VertexType& vtx_2d,
 inline void convertMesh2dTo3d(const Mesh2D& mesh_2d,
                               const cv::Mat& tf_3_2,
                               Mesh3D* mesh_3d,
-                              const float& z = 1.0f) {
+                              [[maybe_unused]] const float& z = 1.0f) {
   CHECK_NOTNULL(mesh_3d);
   Mesh2D::Polygon polygon_2d;
   Mesh3D::Polygon polygon_3d;

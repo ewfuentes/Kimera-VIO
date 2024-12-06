@@ -19,7 +19,7 @@
 namespace VIO {
 
 // foward declare to avoid header includes
-struct CameraParams;
+class CameraParams;
 // TODO(nathan) forward declare opencv types if they get removed from vio_types
 
 class DepthFrame : public PipelinePayload {
