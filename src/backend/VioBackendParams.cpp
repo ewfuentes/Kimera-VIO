@@ -211,8 +211,8 @@ bool BackendParams::equalsVioBackendParams(const BackendParams& vp2,
       (wildfire_threshold_ == vp2.wildfire_threshold_) &&
       (useDogLeg_ == vp2.useDogLeg_) &&
       (pose_guess_source_ == vp2.pose_guess_source_) &&
-      (fabs(mono_translation_scale_factor_ ==
-            vp2.mono_translation_scale_factor_));
+      (fabs(mono_translation_scale_factor_ - 
+            vp2.mono_translation_scale_factor_) <= tol);
 }
 
 void BackendParams::printVioBackendParams() const {
