@@ -269,7 +269,7 @@ class ThreadsafeNullQueue : public ThreadsafeQueue<T> {
   virtual std::shared_ptr<T> popBlocking() override { return nullptr; }
   virtual bool pop(T&) override { return true; }
   virtual std::shared_ptr<T> pop() override { return nullptr; }
-  virtual std::shared_ptr<T> peekBlockingWithTimeout(size_t duration_ms) override {
+  virtual std::shared_ptr<T> peekBlockingWithTimeout([[maybe_unused]] size_t duration_ms) override {
     return nullptr;
   }
 };

@@ -101,7 +101,7 @@ class SimpleQueueSynchronizer : public QueueSynchronizerBase<T> {
                  ThreadsafeQueue<T>* queue,
                  T* pipeline_payload,
                  std::string name_id,
-                 int max_iterations = 10,
+                 [[maybe_unused]] int max_iterations = 10,
                  size_t timeout_ms = 10000u,
                  std::function<void(const T&)>* callback = nullptr) {
     CHECK_NOTNULL(queue);
